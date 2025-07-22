@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import type { RouteLocationNormalized, NavigationGuardNext } from 'vue-router'
 // auth store
 import { useAuthStore } from '@/stores/authStore'  // 👈 Import auth store
 import { storeToRefs } from 'pinia'
@@ -80,11 +81,11 @@ const router = createRouter({
 })
 
 // ✅ Navigation Guard
-router.beforeEach((to, from, next) => {
+router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
   const auth = useAuthStore()
   const { isAuthenticated } = storeToRefs(auth)
 
-  if (to.matched.some(record => record.meta.requiresAuth)) {
+  if (to.matched.some((record: any) => record.meta.requiresAuth)) {
     if (!isAuthenticated.value) {
       next({ name: 'login', query: { redirect: to.fullPath } }) // Save intended path
     } else {

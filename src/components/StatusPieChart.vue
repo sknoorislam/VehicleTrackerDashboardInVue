@@ -13,7 +13,8 @@ import {
   Tooltip,
   Legend,
   ArcElement,
-  CategoryScale
+  CategoryScale,
+  type ChartOptions
 } from 'chart.js'
 import { useVehicleStore } from '@/stores/vehicleStore'
 
@@ -41,11 +42,11 @@ const chartData = computed(() => {
   }
 })
 
-const chartOptions = {
+const chartOptions: ChartOptions<'pie'> = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'bottom'
+      position: 'bottom' as const
     }
   }
 }

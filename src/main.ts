@@ -15,7 +15,7 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 
 // Fix default icon paths
-delete L.Icon.Default.prototype._getIconUrl
+;(L.Icon.Default.prototype as any)._getIconUrl = undefined
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: markerIcon2x,
   iconUrl: markerIcon,
