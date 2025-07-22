@@ -1,5 +1,5 @@
 <template>
-    <div class="container my-4">
+    <div class="container">
         <div class="card card-body d-flex flex-row justify-content-between align-items-center">
             <div>
                 <h5 class="card-title">List of Vehicles</h5>
@@ -77,7 +77,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Vehicle</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

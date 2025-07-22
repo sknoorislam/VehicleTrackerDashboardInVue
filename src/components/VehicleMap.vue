@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import L from 'leaflet'
+import L, { setupLeafletIcons } from '@/utils/leaflet-setup'
 import 'leaflet/dist/leaflet.css'
 import { useVehicleStore } from '@/stores/vehicleStore'
 import { useRouter } from 'vue-router'
@@ -16,6 +16,9 @@ onMounted(() => {
   console.log('Map component mounted')
   console.log('Vehicles in store:', vehicleStore.vehicles)
   console.log('Number of vehicles:', vehicleStore.vehicles.length)
+  
+  // Ensure Leaflet icons are properly configured
+  setupLeafletIcons()
   
   const map = L.map('map').setView([25.276987, 55.296249], 11)
   

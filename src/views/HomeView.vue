@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 
 <template>
   <img src="../assets/banner.png" alt="Vehicle Tracking Banner" class="w-100">
@@ -16,8 +21,8 @@
         <li>📊 Visual status indicators for fleet health</li>
       </ul>
       <div class="mt-4">
-        <a href="#map" class="btn btn-primary me-2">View Live Map</a>
-        <a href="#vehicle-list" class="btn btn-outline-secondary">Browse Vehicles</a>
+        <RouterLink :to="{ name:'admin-dashboard' }" class="btn btn-primary me-2">View Live Map</RouterLink>
+        <RouterLink :to="{ name:'admin-vehicles' }" class="btn btn-outline-secondary">Browse Vehicles</RouterLink>
       </div>
     </div>
     <div class="col-lg-6 text-center">
