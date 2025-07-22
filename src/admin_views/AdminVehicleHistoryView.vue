@@ -3,11 +3,27 @@
     <h3>Route History for {{ vehicle?.name }}</h3>
     <div id="history-map" style="height: 500px;"></div>
     <div v-if="vehicle" class="mt-3">
-      <p><strong>Plate:</strong> {{ vehicle.plate }}</p>
-      <p><strong>Status:</strong> {{ vehicle.status }}</p>
-      <p><strong>Distance Covered:</strong> {{ distanceCovered }} km</p>
-      <p><strong>Average Speed:</strong> {{ averageSpeed }} km/h</p>
+        <p><strong>ID:</strong> {{ vehicle.id }}</p>
+        <p><strong>Name:</strong> {{ vehicle.name }}</p>
+        <p><strong>Type:</strong> {{ vehicle.type }}</p>
+        <p><strong>Last Updated:</strong> {{ new Date(vehicle.lastUpdated).toLocaleString() }}</p>
+        <p><strong>Plate:</strong> {{ vehicle.plate }}</p>
+        <p><strong>Status:</strong> {{ vehicle.status }}</p>
+        <p><strong>Distance Covered:</strong> {{ distanceCovered }} km</p>
+        <p><strong>Average Speed:</strong> {{ averageSpeed }} km/h</p>
     </div>
+    <!-- "id": "v-003",
+    "name": "Taxi 1",
+    "plate": "AUH-9123",
+    "status": "online",
+    "type": "Taxi",
+    "location": { "lat": 24.4539, "lng": 54.3773 },
+    "lastUpdated": "2025-07-22T09:00:00Z",
+    "history": [
+      { "lat": 24.4520, "lng": 54.3760, "timestamp": "2025-07-22T08:30:00Z" },
+      { "lat": 24.4510, "lng": 54.3745, "timestamp": "2025-07-22T08:00:00Z" },
+      { "lat": 24.4500, "lng": 54.3730, "timestamp": "2025-07-22T07:30:00Z" }
+    ] -->
   </div>
 </template>
 

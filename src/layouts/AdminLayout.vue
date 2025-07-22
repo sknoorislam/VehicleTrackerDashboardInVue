@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-md-10 ">
-                    <main class="card card-body">
+                    <main>
                         <RouterView></RouterView>
                     </main>
                 </div>
