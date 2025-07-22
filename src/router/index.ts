@@ -18,6 +18,7 @@ import LoginView from '@/auth/LoginView.vue'
 // admin views
 import AdminDashboardView from '@/admin_views/AdminDashboardView.vue'
 import AdminListView from '@/admin_views/AdminListView.vue'
+import VehicleHistoryView from '@/admin_views/AdminVehicleHistoryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,7 +65,14 @@ const router = createRouter({
           path: 'vehicles',
           name: 'admin-vehicles',
           component: AdminListView
+        },
+        {
+          path: '/admin/vehicle/:id/history',
+          name: 'vehicle-history',
+          component: VehicleHistoryView,
+          props: true // 👈 Pass route params as props
         }
+
       ]
     }
 

@@ -1,5 +1,7 @@
 
 <template>
+  <img src="../assets/banner.png" alt="Vehicle Tracking Banner" class="w-100">
+  
   <section class="container py-5">
   <div class="row align-items-center">
     <div class="col-lg-6 mb-4 mb-lg-0">

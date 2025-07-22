@@ -1,5 +1,7 @@
 <template>
   <!-- about us -->
+    <img src="../assets/about.jpg" alt="Vehicle Tracking Banner" class="w-100">
+
   <section class="container my-5">
   
       <h2 class="mb-4">📘 About Us</h2>

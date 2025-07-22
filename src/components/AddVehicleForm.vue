@@ -17,7 +17,17 @@
           </select>
         </div>
         <div class="col-md-6">
-          <input v-model="type" type="text" class="form-control" placeholder="Vehicle Type" required />
+          <!-- <input v-model="type" type="text" class="form-control" placeholder="Vehicle Type" required /> -->
+            <select v-model="type" class="form-select" required>
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="bus">Bus</option>
+                <option value="van">Van</option>
+                <option value="bicycle">Bicycle</option>
+                <option value="scooter">Scooter</option>
+                <option value="other">Other</option>
+            </select>
         </div>
         <div class="col-md-6">
           <input v-model.number="lat" type="text"  class="form-control" placeholder="Latitude" required />
@@ -62,6 +72,8 @@ const addNewVehicle = () => {
     ]
   }
   vehicleStore.addVehicle(newVehicle)
+  // reload page
+  location.reload()
 
   // Clear form
   name.value = ''

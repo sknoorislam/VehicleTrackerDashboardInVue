@@ -10,7 +10,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2 text-center mt-2">
                             <li class="nav-item">
                                 <router-link class="nav-link" to="/">Home</router-link>
                             </li>
@@ -18,7 +18,7 @@
                                 <router-link class="nav-link" to="/about">About</router-link>
                             </li>
                         </ul>
-                        <div class="d-flex gap-2 align-items-center" role="search">
+                        <div class="d-flex gap-2 align-items-center justify-content-center" role="search">
                             <template v-if="auth.isAuthenticated">
                                 <RouterLink to="/admin/dashboard" class="me-3">Hi, {{ auth.user.name }}</RouterLink>
                                 <button @click="auth.logout" class="btn btn-outline-danger btn-sm">Logout</button>
@@ -27,8 +27,7 @@
                                 <router-link to="/login" class="btn btn-outline-primary btn-sm me-2">Login</router-link>
                                 <router-link to="/register" class="btn btn-outline-success btn-sm">Register</router-link>
                             </template>
-                        </div>
-                        
+                        </div>                        
                     </div>
                 </div>
             </nav>
